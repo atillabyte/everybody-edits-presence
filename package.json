@@ -1,0 +1,27 @@
+{
+  "name": "everybody-edits-presence",
+  "version": "1.0.0",
+  "description": "Discord presence for the Everybody Edits Website.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Atilla Lonny",
+  "license": "Unlicense",
+  "dependencies": {
+    "discord-rich-presence": "0.0.6",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "discord",
+    "everybody edits",
+    "everybodyedits"
+  ],
+  "bugs": {},
+  "homepage": "https://github.com/atillabyte/everybody-edits-presence"
+}
