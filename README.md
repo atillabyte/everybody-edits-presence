@@ -22,3 +22,5 @@ npm start
 ## License
 
 [Unlicense](http://unlicense.org/)
+
+https://www.npmjs.com/package/discord-chrome-presence
