@@ -6,13 +6,19 @@ function updatePresence(tabId, changeInfo, tab) {
       return;
 
     var roomname_url = "games/";
-    var ee_roomid = 'Lobby';
-    var ee_roomname = 'Not currently in a world.';
+    var ee_roomid;
+    var ee_roomname;
 
     if (url.href.lastIndexOf(roomname_url) > -1) {
       ee_roomid = unescape(url.href.substring(url.href.lastIndexOf(roomname_url) + roomname_url.length));
-      ee_roomname = tab.title.substring(0, tab.title.length - ' | Everybody Edits'.length)
+      ee_roomname = tab.title.substring(0, tab.title.length - ' | Everybody Edits'.length);
     }
+
+    if (!ee_roomid)
+      ee_roomid = 'Lobby';
+
+    if (!ee_roomname)
+      ee_roomname = 'Not currently in a world.';
 
     var data = {
       url: tab.url,
