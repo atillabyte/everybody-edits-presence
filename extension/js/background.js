@@ -7,7 +7,6 @@ function updatePresence(tabId, changeInfo, tab) {
   chrome.tabs.query({}, function (tabs) {
     var everybodyEditsInstances = tabs.some(function (tab) { return new URL(tab.url).hostname == 'everybodyedits.com' });
 
-    new URL('')
     if (!everybodyEditsInstances) {
       if (current_room_id != 'Offline')
         setCurrentRoom('Not currently in a world.', 'Offline');
