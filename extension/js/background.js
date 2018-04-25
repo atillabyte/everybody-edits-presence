@@ -28,13 +28,16 @@ function updatePresence(tabId, changeInfo, tab) {
     if (url.href.lastIndexOf(room_name_uri) > -1) {
       room_id = unescape(url.href.substring(url.href.lastIndexOf(room_name_uri) + room_name_uri.length));
       room_name = tab.title.substring(0, tab.title.length - ' | Everybody Edits'.length);
-
-      last_joined_world = Date.now();
     }
 
     if (!room_id) {
       room_id = 'Lobby';
       room_name = 'Not currently in a world.';
+    }
+    else {
+      if (current_room_id != room_id) {
+        last_joined_world = Date.now();
+      }
     }
 
     var force_update = room_id != 'Lobby' && room_id != 'Offline' && (new Date().getTime() - last_update >= 5000);
